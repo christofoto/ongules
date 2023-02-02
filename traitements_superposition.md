@@ -1,15 +1,17 @@
 <p align="center">
   <a href="https://professionnels.ofb.fr/fr/reseau-ongules-sauvages">
-    <img src="https://github.com/christofoto/ongules/raw/main/images/france_pano.png" alt="Logo" height=200 >
+    <img src="https://github.com/christofoto/ongules/raw/main/images/header.png" alt="Logo">
   </a>
 
   <!-- <h3 align="center">Logo</h3> -->
 
-  <p align="center">
-    <h2>Chaine de traitements <br>
-    pour déterminer le nombre d'ongulés présents<br> en tout point de la France métropolitaine
-    <br>
-    </p>
+  <!-- <h1 style="text-align:center">
+    Chaine de traitements </h1>
+  <h3 style="text-align:center">
+  pour déterminer le nombre d'espèces d'ongulés<br> 
+  présentes en tout point de la France métropolitaine
+  <br>
+    </h3> -->
 </p>
 
 <a name="readme-top"></a>
