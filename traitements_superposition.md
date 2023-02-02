@@ -6,7 +6,7 @@
   <!-- <h3 align="center">Logo</h3> -->
 
   <p align="center">
-    <h3>Chaine de traitements <br>
+    <h2>Chaine de traitements <br>
     pour déterminer le nombre d'ongulés présents<br> en tout point de la France métropolitaine
     <br>
     </p>
@@ -14,7 +14,7 @@
 
 <a name="readme-top"></a>
 
-## Table des matières
+### Table des matières
 
 - [Pré-requis](#pré-requis)
 - [Status](#status)
@@ -25,21 +25,21 @@
 - [Thanks](#thanks)
 - [Copyright and license](#copyright-and-license)
 
-## Pré-requis
+### Pré-requis
 
-Some text
+Avoir les logiciels suivants installés
 
-- Instruction 1
-- Instruction 2
-- Instruction 3
+- QGIS 3.22 ou la dernière version LTR au moment de la lecture de ce tutoriel
+- OSGeo4W Shell : c'est le terminal qui est disponible quand on installe QGIS aussi depuis un exécutable que depuis l'installateur OSGeo4W. Cela permettra d'utiliser la librairie GDAL pour effectuer des traitements directement en ligne de commande sans avoir à passer par QGIS
+- Un éditeur de texte avancé de type Visual Studio Code ou Notepad++ est un plus.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Status
+### Status
 
 Here goes all the budgets
 
-## Dossier final
+### Dossier final
 
 Some text
 
@@ -54,13 +54,13 @@ folder1/
         └── file4
 ```
 
-## Bugs and feature requests
+### Bugs and feature requests
 
 Have a bug or a feature request? Please first read the [issue guidelines](https://reponame/blob/master/CONTRIBUTING.md) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://reponame/issues/new).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Contributing
+### Contributing
 
 Please read through our [contributing guidelines](https://reponame/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
 
@@ -68,17 +68,17 @@ Moreover, all HTML and CSS should conform to the [Code Guide](https://github.com
 
 Editor preferences are available in the [editor config](https://reponame/blob/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org/>.
 
-## Creators
+### Creators
 
 **Creator 1**
 
 - <https://github.com/usernamecreator1>
 
-## Thanks
+### Thanks
 
 Some Text
 
-## Copyright and license
+### Copyright and license
 
 Code and documentation copyright 2011-2018 the authors. Code released under the [MIT License](https://reponame/blob/master/LICENSE).
 
