@@ -19,8 +19,7 @@
 ### Table des matières
 
 - [Pré-requis](#pré-requis)
-- [Status](#status)
-- [Dossier final](#dossier-final)
+- [Organisation des dossiers](#organisation-des-dossiers)
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Contributing](#contributing)
 - [Creators](#creators)
@@ -31,17 +30,13 @@
 
 Avoir les logiciels suivants installés
 
-- QGIS 3.22 ou la dernière version LTR au moment de la lecture de ce tutoriel
-- OSGeo4W Shell : c'est le terminal qui est disponible quand on installe QGIS aussi depuis un exécutable que depuis l'installateur OSGeo4W. Cela permettra d'utiliser la librairie GDAL pour effectuer des traitements directement en ligne de commande sans avoir à passer par QGIS
-- Un éditeur de texte avancé de type Visual Studio Code ou Notepad++ est un plus.
+- [QGIS 3.22](https://www.qgis.org/fr/site/forusers/download.html) ou la dernière version LTR au moment de la lecture de ce tutoriel
+- <b>OSGeo4W Shell</b> : c'est le terminal qui est disponible quand on installe QGIS aussi depuis un exécutable que depuis l'installateur OSGeo4W. Cela permettra d'utiliser la librairie GDAL pour effectuer des traitements directement en ligne de commande sans avoir à passer par QGIS
+- Un éditeur de texte avancé de type [Visual Studio Code](https://code.visualstudio.com/) ou [Notepad++](https://notepad-plus-plus.org/) est un plus pour travailler sur son code
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Status
-
-Here goes all the budgets
-
-### Dossier final
+### Organisation des dossiers
 
 Some text
 
@@ -55,6 +50,8 @@ folder1/
         ├── file3
         └── file4
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Bugs and feature requests
 
