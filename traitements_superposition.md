@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+
 <p align="center">
   <a href="https://example.com/">
     <img src="https://github.com/christofoto/ongules/raw/main/images/france_test.png" alt="Logo" width=200 >
@@ -14,7 +16,7 @@
 
 ## Table des matières
 
-- [Pré-requis](#pre-requis)
+- [Pré-requis](#pré-requis)
 - [Status](#status)
 - [Dossier final](#dossier-final)
 - [Bugs and feature requests](#bugs-and-feature-requests)
@@ -30,6 +32,8 @@ Some text
 - Instruction 1
 - Instruction 2
 - Instruction 3
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Status
 
@@ -53,6 +57,8 @@ folder1/
 ## Bugs and feature requests
 
 Have a bug or a feature request? Please first read the [issue guidelines](https://reponame/blob/master/CONTRIBUTING.md) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://reponame/issues/new).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contributing
 
