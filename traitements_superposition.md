@@ -1,5 +1,3 @@
-<a name="readme-top"></a>
-
 <p align="center">
   <a href="https://example.com/">
     <img src="https://github.com/christofoto/ongules/raw/main/images/france_test.png" alt="Logo" width=200 >
@@ -7,12 +5,14 @@
 
   <!-- <h3 align="center">Logo</h3> -->
 
-  <p align="center">
-    <b>Chaine de traitements <br>
+  <center>
+    <h3>Chaine de traitements <br>
     pour déterminer le nombre d'ongulés présents<br> en tout point de la France métropolitaine
     <br>
-    </p>
+    </center>
 </p>
+
+<a name="readme-top"></a>
 
 ## Table des matières
 
