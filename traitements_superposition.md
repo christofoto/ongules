@@ -20,7 +20,6 @@
 
 - [Pré-requis](#pré-requis)
 - [Organisation des dossiers](#organisation-des-dossiers)
-- [Préparation du raster de réference](#préparation-du-raster-de-réference)
 - [En avant pour les traitements](#en-avant-pour-les-traitements)
 - [Creators](#creators)
 - [Thanks](#thanks)
@@ -52,13 +51,13 @@ data/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Préparation du raster de réference
-
-Have a bug or a feature request? Please first read the [issue guidelines](https://reponame/blob/master/CONTRIBUTING.md) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://reponame/issues/new).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ### En avant pour les traitements
+
+#### Préparation du raster de référence
+
+Dans notre cas, on veut avoir un raster qui recouvre la France, Corse comprise.
+Le fichier vectoriel est au format Shapefile et a été construit à partir de la base de données [GEOFLA](https://geoservices.ign.fr/geofla) de l'IGN.
+Un exemplaire zippé est téléchargeable [ICI](https://github.com/christofoto/ongules/raw/main/ressources/france_geofla_shapefile.zip)
 
 ```code
 cd D:\SIG\data\admin\geofla\FRANCE
