@@ -28,7 +28,7 @@
 
 ### Pré-requis
 
-Avoir les logiciels suivants installés
+Avoir les logiciels suivants installés sur son ordinateur :
 
 - [QGIS 3.22](https://www.qgis.org/fr/site/forusers/download.html) ou la dernière version LTR au moment de la lecture de ce tutoriel
 - <b>OSGeo4W Shell</b> : c'est le terminal qui est disponible quand on installe QGIS aussi depuis un exécutable que depuis l'installateur OSGeo4W. Cela permettra d'utiliser la librairie GDAL pour effectuer des traitements directement en ligne de commande sans avoir à passer par QGIS
