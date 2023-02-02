@@ -18,13 +18,13 @@
 
 ### Table des matières
 
-- [Pré-requis](#pré-requis)
+- [Prérequis](#prérequis)
 - [Organisation des dossiers](#organisation-des-dossiers)
 - [En avant pour les traitements](#en-avant-pour-les-traitements)
-- [Créateur](#createur)
+- [Remerciements](#remerciements)
 - [Copyright and license](#copyright-and-license)
 
-### Pré-requis
+### Prérequis
 
 Avoir les logiciels suivants installés sur son ordinateur :
 
