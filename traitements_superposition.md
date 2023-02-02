@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://professionnels.ofb.fr/fr/reseau-ongules-sauvages">
-    <img src="https://github.com/christofoto/ongules/raw/main/images/france_test.png" alt="Logo"  >
+    <img src="https://github.com/christofoto/ongules/raw/main/images/france_pano.png" alt="Logo"  >
   </a>
 
   <!-- <h3 align="center">Logo</h3> -->
