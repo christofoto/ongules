@@ -60,7 +60,7 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 ### En avant pour les traitements
 
-```console
+```code
 cd D:\SIG\data\admin\geofla\FRANCE
 gdal_rasterize -burn 0 -ot Int16 -ts 10000 10000 -a_nodata -32768 france.shp grid_france_10000.tif
 ```
@@ -71,26 +71,26 @@ set folder_raster_burn=D:\SIG\travail\test\ongules_superposition\data\rasters_te
 set folder_vector=D:\SIG\travail\test\ongules_superposition\data\especes
 ```
 
-```console
+```code
 D:
 cd %folder_vector%
 copy %folder_raster%\grid_france_10000.tif %folder_raster%\grid_france_10000_final.tif
 ```
 
-```console
+```code
 for %F in (*.shp) do copy %folder_raster%\grid_france_10000.tif %folder_raster_burn%\grid_france_10000_%F.tif
 ```
 
-```console
+```code
 for %F in (*.shp) do gdal_rasterize -burn 1 "%F" %folder_raster_burn%\grid_france_10000_%F.tif
 ```
 
-```console
+```code
 cd %folder_raster_burn%
 for %F in (*.tif) do gdal_calc -A  %folder_raster%\grid_france_10000_final.tif -B "%F" --outfile=%folder_raster%\grid_france_10000_final.tif --calc="(A+B)"
 ```
 
-```console
+```code
 cd %folder_raster_burn%
 del *.tif
 ```
