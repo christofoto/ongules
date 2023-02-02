@@ -65,7 +65,7 @@ cd D:\SIG\data\admin\geofla\FRANCE
 gdal_rasterize -burn 0 -ot Int16 -ts 10000 10000 -a_nodata -32768 france.shp grid_france_10000.tif
 ```
 
-```console
+```code
 set folder_raster=D:\SIG\data\admin\geofla\FRANCE
 set folder_raster_burn=D:\SIG\travail\test\ongules_superposition\data\rasters_test\raster_espece_burn_1
 set folder_vector=D:\SIG\travail\test\ongules_superposition\data\especes
