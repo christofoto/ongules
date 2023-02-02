@@ -21,7 +21,7 @@
 - [Pré-requis](#pré-requis)
 - [Organisation des dossiers](#organisation-des-dossiers)
 - [Préparation du raster de réference](#préparation-du-raster-de-réference)
-- [Et c'est parti pour les traitements](#et-c-est-parti-pour-les-traitements)
+- [Et c'est parti pour les traitements](#et-c-'-est-parti-pour-les-traitements)
 - [Creators](#creators)
 - [Thanks](#thanks)
 - [Copyright and license](#copyright-and-license)
@@ -94,6 +94,8 @@ for %F in (*.tif) do gdal_calc -A  %folder_raster%\grid_france_10000_final.tif -
 cd %folder_raster_burn%
 del *.tif
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Creators
 
