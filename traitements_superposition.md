@@ -5,11 +5,11 @@
 
   <!-- <h3 align="center">Logo</h3> -->
 
-  <center>
+  <p align="center">
     <h3>Chaine de traitements <br>
     pour déterminer le nombre d'ongulés présents<br> en tout point de la France métropolitaine
     <br>
-    </center>
+    </p>
 </p>
 
 <a name="readme-top"></a>
