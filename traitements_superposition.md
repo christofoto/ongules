@@ -41,14 +41,13 @@ Avoir les logiciels suivants installés sur son ordinateur :
 Some text
 
 ```text
-folder1/
-└── folder2/
-    ├── folder3/
-    │   ├── file1
-    │   └── file2
-    └── folder4/
-        ├── file3
-        └── file4
+data/
+  │── rasters/
+  │   ├── grid_france_100.tif
+  │   └── raster_espece_burn_1/
+  │       └── *.tif*
+  └── especes/
+          └── *.shp
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
