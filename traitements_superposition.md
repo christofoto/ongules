@@ -20,7 +20,7 @@
 
 - [Pré-requis](#pré-requis)
 - [Organisation des dossiers](#organisation-des-dossiers)
-- [Bugs and feature requests](#bugs-and-feature-requests)
+- [Préparation du raster de réference](#préparation-du-raster-de-réference)
 - [Contributing](#contributing)
 - [Creators](#creators)
 - [Thanks](#thanks)
@@ -52,7 +52,7 @@ data/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Bugs and feature requests
+### Préparation du raster de réference
 
 Have a bug or a feature request? Please first read the [issue guidelines](https://reponame/blob/master/CONTRIBUTING.md) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://reponame/issues/new).
 
