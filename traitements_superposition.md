@@ -21,7 +21,7 @@
 - [Pré-requis](#pré-requis)
 - [Organisation des dossiers](#organisation-des-dossiers)
 - [Préparation du raster de réference](#préparation-du-raster-de-réference)
-- [Et c'est parti pour les traitements](#et-c-'-est-parti-pour-les-traitements)
+- [En avant pour les traitements](#en-avant-pour-les-traitements)
 - [Creators](#creators)
 - [Thanks](#thanks)
 - [Copyright and license](#copyright-and-license)
@@ -58,7 +58,7 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Et c'est parti pour les traitements
+### En avant pour les traitements
 
 ```console
 cd D:\SIG\data\admin\geofla\FRANCE
