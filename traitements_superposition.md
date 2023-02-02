@@ -103,9 +103,13 @@ del *.tif
 
 - <https://github.com/usernamecreator1>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Thanks
 
 Some Text
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Copyright and license
 
