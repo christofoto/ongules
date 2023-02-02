@@ -14,9 +14,9 @@
 
 ## Table des matières
 
-- [Pré-requis](#quick-start)
+- [Pré-requis](#pre-requis)
 - [Status](#status)
-- [Dossier final](#whats-included)
+- [Dossier final](#dossier-final)
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Contributing](#contributing)
 - [Creators](#creators)
