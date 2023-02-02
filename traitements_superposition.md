@@ -21,8 +21,7 @@
 - [Pré-requis](#pré-requis)
 - [Organisation des dossiers](#organisation-des-dossiers)
 - [En avant pour les traitements](#en-avant-pour-les-traitements)
-- [Creators](#creators)
-- [Thanks](#thanks)
+- [Créateur](#createur)
 - [Copyright and license](#copyright-and-license)
 
 ### Pré-requis
@@ -96,15 +95,16 @@ del *.tif
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Creators
+<!-- ### Creators
 
 **Creator 1**
 
-- <https://github.com/usernamecreator1>
+- <https://github.com/christofoto>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+ -->
 
-### Thanks
+### Remerciements
 
 Some Text
 

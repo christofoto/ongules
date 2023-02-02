@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>traitements_superposition.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<p align="center">
+  <a href="https://professionnels.ofb.fr/fr/reseau-ongules-sauvages">
+    <img src="https://github.com/christofoto/ongules/raw/main/images/header.png" alt="Logo">
+  </a>
+</p>  <!-- <h3 align="center">Logo</h3> -->
+  <!-- <h1 style="text-align:center">
+    Chaine de traitements </h1>
+  <h3 style="text-align:center">
+  pour déterminer le nombre d'espèces d'ongulés<br> 
+  présentes en tout point de la France métropolitaine
+  <br>
+    </h3> -->
+<p></p>
+<p><a name="readme-top"></a></p>
+<h3 id="table-des-mati%C3%A8res">Table des matières</h3>
+<ul>
+<li><a href="#pr%C3%A9-requis">Pré-requis</a></li>
+<li><a href="#organisation-des-dossiers">Organisation des dossiers</a></li>
+<li><a href="#en-avant-pour-les-traitements">En avant pour les traitements</a></li>
+<li><a href="#creators">Creators</a></li>
+<li><a href="#thanks">Thanks</a></li>
+<li><a href="#copyright-and-license">Copyright and license</a></li>
+</ul>
+<h3 id="pr%C3%A9-requis">Pré-requis</h3>
+<p>Avoir les logiciels suivants installés sur son ordinateur :</p>
+<ul>
+<li><a href="https://www.qgis.org/fr/site/forusers/download.html">QGIS 3.22 LTR</a>, la dernière version LTR au moment de la création de ce tutoriel</li>
+<li><b>OSGeo4W Shell</b> : c'est le terminal qui est disponible quand on installe QGIS aussi depuis un exécutable que depuis l'installateur OSGeo4W. Cela permettra d'utiliser la librairie GDAL pour effectuer des traitements directement en ligne de commande sans avoir à passer par QGIS</li>
+<li>Un éditeur de texte avancé de type <a href="https://code.visualstudio.com/">Visual Studio Code</a> ou <a href="https://notepad-plus-plus.org/">Notepad++</a> est un plus pour travailler sur son code</li>
+</ul>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<h3 id="organisation-des-dossiers">Organisation des dossiers</h3>
+<p>Some text</p>
+<pre class="hljs"><code><div>data/
+  │── rasters/
+  │   ├── grid_france_100.tif
+  │   └── raster_espece_burn_1/
+  │       └── *.tif*
+  └── especes/
+          └── *.shp
+</div></code></pre>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<h3 id="en-avant-pour-les-traitements">En avant pour les traitements</h3>
+<h4 id="pr%C3%A9paration-du-raster-de-r%C3%A9f%C3%A9rence">Préparation du raster de référence</h4>
+<p>Dans notre cas, on veut avoir un raster qui recouvre la France, Corse comprise.
+Le fichier vectoriel est au format Shapefile et a été construit à partir de la base de données <a href="https://geoservices.ign.fr/geofla">GEOFLA</a> de l'IGN.
+Un exemplaire zippé est téléchargeable <a href="https://github.com/christofoto/ongules/raw/main/ressources/france_geofla_shapefile.zip">ICI</a></p>
+<pre class="hljs"><code><div>cd D:\SIG\data\admin\geofla\FRANCE
+gdal_rasterize -burn 0 -ot Int16 -ts 10000 10000 -a_nodata -32768 france.shp grid_france_10000.tif
+</div></code></pre>
+<pre class="hljs"><code><div>set folder_raster=D:\SIG\data\admin\geofla\FRANCE
+set folder_raster_burn=D:\SIG\travail\test\ongules_superposition\data\rasters_test\raster_espece_burn_1
+set folder_vector=D:\SIG\travail\test\ongules_superposition\data\especes
+</div></code></pre>
+<pre class="hljs"><code><div>D:
+cd %folder_vector%
+copy %folder_raster%\grid_france_10000.tif %folder_raster%\grid_france_10000_final.tif
+</div></code></pre>
+<pre class="hljs"><code><div>for %F in (*.shp) do copy %folder_raster%\grid_france_10000.tif %folder_raster_burn%\grid_france_10000_%F.tif
+</div></code></pre>
+<pre class="hljs"><code><div>for %F in (*.shp) do gdal_rasterize -burn 1 &quot;%F&quot; %folder_raster_burn%\grid_france_10000_%F.tif
+</div></code></pre>
+<pre class="hljs"><code><div>cd %folder_raster_burn%
+for %F in (*.tif) do gdal_calc -A  %folder_raster%\grid_france_10000_final.tif -B &quot;%F&quot; --outfile=%folder_raster%\grid_france_10000_final.tif --calc=&quot;(A+B)&quot;
+</div></code></pre>
+<pre class="hljs"><code><div>cd %folder_raster_burn%
+del *.tif
+</div></code></pre>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<h3 id="creators">Creators</h3>
+<p><strong>Creator 1</strong></p>
+<ul>
+<li><a href="https://github.com/usernamecreator1">https://github.com/usernamecreator1</a></li>
+</ul>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<h3 id="thanks">Thanks</h3>
+<p>Some Text</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<h3 id="copyright-and-license">Copyright and license</h3>
+<p>Code and documentation copyright 2011-2018 the authors. Code released under the <a href="https://reponame/blob/master/LICENSE">MIT License</a>.</p>
+<p>Enjoy <img class="emoji" alt="metal" src="data:image/png;base64,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" /></p>
+
+</body>
+</html>
