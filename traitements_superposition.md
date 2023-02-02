@@ -21,7 +21,7 @@
 - [Pré-requis](#pré-requis)
 - [Organisation des dossiers](#organisation-des-dossiers)
 - [Préparation du raster de réference](#préparation-du-raster-de-réference)
-- [Contributing](#contributing)
+- [Et c'est parti pour les traitements](#et-c'est-parti-pour-les-traitements)
 - [Creators](#creators)
 - [Thanks](#thanks)
 - [Copyright and license](#copyright-and-license)
@@ -58,13 +58,42 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Contributing
+### Et c'est parti pour les traitements
 
-Please read through our [contributing guidelines](https://reponame/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
+```console
+cd D:\SIG\data\admin\geofla\FRANCE
+gdal_rasterize -burn 0 -ot Int16 -ts 10000 10000 -a_nodata -32768 france.shp grid_france_10000.tif
+```
 
-Moreover, all HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Main author](https://github.com/usernamemainauthor).
+```console
+set folder_raster=D:\SIG\data\admin\geofla\FRANCE
+set folder_raster_burn=D:\SIG\travail\test\ongules_superposition\data\rasters_test\raster_espece_burn_1
+set folder_vector=D:\SIG\travail\test\ongules_superposition\data\especes
+```
 
-Editor preferences are available in the [editor config](https://reponame/blob/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org/>.
+```console
+D:
+cd %folder_vector%
+copy %folder_raster%\grid_france_10000.tif %folder_raster%\grid_france_10000_final.tif
+```
+
+```console
+for %F in (*.shp) do copy %folder_raster%\grid_france_10000.tif %folder_raster_burn%\grid_france_10000_%F.tif
+```
+
+```console
+for %F in (*.shp) do gdal_rasterize -burn 1 "%F" %folder_raster_burn%\grid_france_10000_%F.tif
+```
+
+```console
+cd %folder_raster_burn%
+for %F in (*.tif) do gdal_calc -A  %folder_raster%\grid_france_10000_final.tif -B "%F" --outfile=%folder_raster%\grid_france_10000_final.tif --calc="(A+B)"
+```
+
+```console
+cd %folder_raster_burn%
+del *.tif
+```
 
 ### Creators
 
