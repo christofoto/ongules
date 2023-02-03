@@ -65,7 +65,7 @@ Les lignes de commandes ci-dessous sont valables pour le terminal OSGeo4W Shell 
 Pour bien commencer, il faut donc remplacer "CHEMIN_COMPLET_VERS_DATA" par le chemin en entier du dossier "data".<br>
 On suppose que l'organisation choisie des dossiers est celle proposée ci-dessus. Si ce n'est pas le cas, bien renseigner le chemin pour chaque dossier.<br>
 
-> **IMPORTANT** : veiller à bien utiliser deux dossiers pour les rasters. Un pour le raster de référence et le final. Un pour les rasters qui contiendront les données pour chaque espèce.
+> **IMPORTANT** : veiller à bien utiliser deux dossiers différents pour les rasters. Un pour le raster de référence et le final. Un pour les rasters qui contiendront les données pour chaque espèce.
 
 ```code
 set folder_vector_for_extent=CHEMIN_COMPLET_VERS_DATA\data\vectors
