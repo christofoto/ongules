@@ -12,14 +12,14 @@ copy %folder_raster%\grid_france_100.tif %folder_raster%\grid_france_100_final.t
 
 cd %folder_vector%
 %disk%
-for %F in (*.shp) do copy %folder_raster%\grid_france_10000.tif %folder_raster_burn%\grid_france_10000_%F.tif
+for %F in (*.shp) do copy %folder_raster%\grid_france_100.tif %folder_raster_burn%\grid_france_100_%F.tif
 
 cd %folder_vector%
 %disk%
 for %F in (*.shp) do gdal_rasterize -burn 1 "%F" %folder_raster_burn%\grid_france_100_%F.tif
 
 cd %folder_raster_burn%
-for %F in (*.tif) do gdal_calc -A  %folder_raster%\grid_france_10000_final.tif -B "%F" --outfile=%folder_raster%\grid_france_100_final.tif --calc="(A+B)"
+for %F in (*.tif) do gdal_calc -A  %folder_raster%\grid_france_100_final.tif -B "%F" --outfile=%folder_raster%\grid_france_100_final.tif --calc="(A+B)"
 
 cd %folder_raster_burn%
 del *.tif

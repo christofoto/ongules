@@ -118,7 +118,7 @@ On se rend dans le dossier contenant les rasters des espèces. Et on additionne 
 
 ```code
 cd %folder_raster_burn%
-for %F in (*.tif) do gdal_calc -A  %folder_raster%\grid_france_10000_final.tif -B "%F" --outfile=%folder_raster%\grid_france_100_final.tif --calc="(A+B)"
+for %F in (*.tif) do gdal_calc -A  %folder_raster%\grid_france_100_final.tif -B "%F" --outfile=%folder_raster%\grid_france_100_final.tif --calc="(A+B)"
 ```
 
 Pour dégager de l'espace sur l'ordinateur, on peut supprimer les rasters concernant les espèces.
