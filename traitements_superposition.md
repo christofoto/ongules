@@ -85,7 +85,7 @@ Grâce à la commande [gdal_rasterize](https://gdal.org/programs/gdal_rasterize.
 ```code
 cd %folder_vector_for_extent%
 %disk%
-gdal_rasterize -burn 0 -ot Int16 -ts 100 100 -a_nodata -32768 france.shp %folder_raster%\grid_france_100.tif
+gdal_rasterize -burn 0 -ot Int16 -tr 100 100 -a_nodata -32768 france.shp %folder_raster%\grid_france_100.tif
 ```
 
 On fait une copie du fichier de référence histoire de le laisser tranquille pour une autre utilisation éventuellement.
