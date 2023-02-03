@@ -36,14 +36,18 @@ Avoir les logiciels suivants installés sur son ordinateur :
 
 ### Organisation des dossiers
 
-Some text
+Une proposition d'organisation des dossiers pour ces traitements
 
 ```text
 data/
+  │── vectors/
+  │   └── vector_for_extent.shp
+  │
   │── rasters/
   │   ├── grid_france_100.tif
   │   └── raster_espece_burn_1/
   │       └── *.tif*
+  │
   └── especes/
           └── *.shp
 ```
@@ -59,14 +63,15 @@ Le fichier vectoriel est au format Shapefile et a été construit à partir de l
 Un exemplaire zippé est téléchargeable [ICI](https://github.com/christofoto/ongules/raw/main/ressources/france_geofla_shapefile.zip)
 
 ```code
-cd D:\SIG\data\admin\geofla\FRANCE
-gdal_rasterize -burn 0 -ot Int16 -ts 10000 10000 -a_nodata -32768 france.shp grid_france_10000.tif
-```
-
-```code
+set folder_vector_for_extent=
 set folder_raster=D:\SIG\data\admin\geofla\FRANCE
 set folder_raster_burn=D:\SIG\travail\test\ongules_superposition\data\rasters_test\raster_espece_burn_1
 set folder_vector=D:\SIG\travail\test\ongules_superposition\data\especes
+```
+
+```code
+cd D:\SIG\data\admin\geofla\FRANCE
+gdal_rasterize -burn 0 -ot Int16 -ts 10000 10000 -a_nodata -32768 france.shp grid_france_10000.tif
 ```
 
 ```code
@@ -97,7 +102,7 @@ del *.tif
 
 ### Auteur
 
-[Christophe Ferrier](https://github.com/christofoto)
+[Christophe Ferrier](https://github.com/christofoto)<br>
 **_Technicien de recherche à l'[OFB](https://www.ofb.gouv.fr/)_**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
