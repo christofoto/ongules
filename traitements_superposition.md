@@ -99,7 +99,7 @@ On se rend dans le dossier contenant les couches vectorielles de chaque espèce 
 ```code
 cd %folder_vector%
 %disk%
-for %F in (*.shp) do copy %folder_raster%\grid_france_10000.tif %folder_raster_burn%\grid_france_10000_%F.tif
+for %F in (*.shp) do copy %folder_raster%\grid_france_100.tif %folder_raster_burn%\grid_france_100_%F.tif
 ```
 
 #### On peut lancer la cuisson...
