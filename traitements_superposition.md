@@ -52,45 +52,63 @@ data/
           └── *.shp
 ```
 
+**_Un exemplaire zippé des dossiers comme ci-dessus avec le fichier vectoriel de la France est téléchargeable [ICI](https://github.com/christofoto/ongules/raw/main/ressources/data.zip)_**
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### En avant pour les traitements
+
+Les lignes de commandes ci-dessous sont valables pour le terminal OSGeo4W Shell de Windows.
+
+#### Quelques variables en entrée...
+
+Pour bien commencer, il faut donc remplacer "CHEMIN_COMPLET_VERS_DATA" par le chemin en entier du dossier "data".
+On suppose que l'organisation choisie des dossiers est celle proposée ci-dessus. Si ce n'est pas le cas, bien renseigné les chemin complet pour chaque dossier.
+
+```code
+set folder_vector_for_extent=CHEMIN_COMPLET_VERS_DATA\data\vectors
+set folder_raster=CHEMIN_COMPLET_VERS_DATA\data\rasters
+set folder_raster_burn=CHEMIN_COMPLET_VERS_DATA\data\rasters\raster_espece_burn_1
+set folder_vector=CHEMIN_COMPLET_VERS_DATA\data\especes
+set disk=%folder_raster:~0,2%
+```
 
 #### Préparation du raster de référence
 
 Dans notre cas, on veut avoir un raster qui recouvre la France, Corse comprise.
 Le fichier vectoriel est au format Shapefile et a été construit à partir de la base de données [GEOFLA](https://geoservices.ign.fr/geofla) de l'IGN.
-Un exemplaire zippé est téléchargeable [ICI](https://github.com/christofoto/ongules/raw/main/ressources/france_geofla_shapefile.zip)
 
 ```code
-set folder_vector_for_extent=
-set folder_raster=D:\SIG\data\admin\geofla\FRANCE
-set folder_raster_burn=D:\SIG\travail\test\ongules_superposition\data\rasters_test\raster_espece_burn_1
-set folder_vector=D:\SIG\travail\test\ongules_superposition\data\especes
+set folder_vector_for_extent=CHEMIN_COMPLET_VERS_DATA\data\vectors
+set folder_raster=CHEMIN_COMPLET_VERS_DATA\data\rasters
+set folder_raster_burn=CHEMIN_COMPLET_VERS_DATA\data\rasters\raster_espece_burn_1
+set folder_vector=CHEMIN_COMPLET_VERS_DATA\data\especes
+set disk=%folder_raster:~0,2%
 ```
 
 ```code
-cd D:\SIG\data\admin\geofla\FRANCE
-gdal_rasterize -burn 0 -ot Int16 -ts 10000 10000 -a_nodata -32768 france.shp grid_france_10000.tif
+cd %folder_vector_for_extent%
+%disk%
+gdal_rasterize -burn 0 -ot Int16 -ts 100 100 -a_nodata -32768 france.shp %folder_raster%\grid_france_100.tif
 ```
 
 ```code
-D:
+copy %folder_raster%\grid_france_100.tif %folder_raster%\grid_france_100_final.tif
+```
+
+```code
 cd %folder_vector%
-copy %folder_raster%\grid_france_10000.tif %folder_raster%\grid_france_10000_final.tif
-```
-
-```code
+%disk%
 for %F in (*.shp) do copy %folder_raster%\grid_france_10000.tif %folder_raster_burn%\grid_france_10000_%F.tif
 ```
 
 ```code
-for %F in (*.shp) do gdal_rasterize -burn 1 "%F" %folder_raster_burn%\grid_france_10000_%F.tif
+for %F in (*.shp) do gdal_rasterize -burn 1 "%F" %folder_raster_burn%\grid_france_100_%F.tif
 ```
 
 ```code
 cd %folder_raster_burn%
-for %F in (*.tif) do gdal_calc -A  %folder_raster%\grid_france_10000_final.tif -B "%F" --outfile=%folder_raster%\grid_france_10000_final.tif --calc="(A+B)"
+for %F in (*.tif) do gdal_calc -A  %folder_raster%\grid_france_10000_final.tif -B "%F" --outfile=%folder_raster%\grid_france_100_final.tif --calc="(A+B)"
 ```
 
 ```code
