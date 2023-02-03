@@ -102,7 +102,7 @@ del *.tif
 
 ### Auteur
 
-[Christophe Ferrier](https://github.com/christofoto)
+[Christophe Ferrier](https://github.com/christofoto)<br>
 **_Technicien de recherche à l'[OFB](https://www.ofb.gouv.fr/)_**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
