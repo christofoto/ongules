@@ -21,7 +21,7 @@
 - [Prérequis](#prérequis)
 - [Organisation des dossiers](#organisation-des-dossiers)
 - [En avant pour les traitements](#en-avant-pour-les-traitements)
-- [Remerciements](#remerciements)
+- [Auteur](#auteur)
 - [Copyright and license](#copyright-and-license)
 
 ### Prérequis
@@ -95,20 +95,19 @@ del *.tif
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ### Creators
+### Auteur
 
-**Creator 1**
-
-- <https://github.com/christofoto>
+[Christophe Ferrier](https://github.com/christofoto)
+**_Technicien de recherche à l'[OFB](https://www.ofb.gouv.fr/)_**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ### Remerciements
+
+Some Text -->
+
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p>
  -->
-
-### Remerciements
-
-Some Text
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Copyright and license
 
