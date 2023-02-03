@@ -128,6 +128,8 @@ cd %folder_raster_burn%
 del *.tif
 ```
 
+> L'ensemble du code sans les commentaires est [ICI](https://github.com/christofoto/ongules/raw/main/scripts/code_superposition.txt)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Auteur
