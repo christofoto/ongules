@@ -121,24 +121,23 @@ cd %folder_raster_burn%
 for %F in (*.tif) do gdal_calc -A  %folder_raster%\grid_france_10000_final.tif -B "%F" --outfile=%folder_raster%\grid_france_100_final.tif --calc="(A+B)"
 ```
 
-Pour dégager de l'espace sur l'ordinateur, on peut supprimmer les rasters concernant les espèces.
+Pour dégager de l'espace sur l'ordinateur, on peut supprimer les rasters concernant les espèces.
 
 ```code
 cd %folder_raster_burn%
 del *.tif
 ```
 
-> L'ensemble du code sans les commentaires est [ICI](https://github.com/christofoto/ongules/raw/main/scripts/code_superposition.txt)
+> Le code sans les commentaires est téléchargeable [ICI](https://github.com/christofoto/ongules/blob/main/scripts/code_superposition.txt).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Auteur
 
-[Christophe Ferrier](https://github.com/christofoto)<br>
-**_Technicien de recherche à l'[OFB](https://www.ofb.gouv.fr/)_**
+[Christophe Ferrier](https://github.com/christofoto) / _Technicien de recherche à l'[OFB](https://www.ofb.gouv.fr/)_
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p>
+ -->
 <!-- ### Remerciements
 
 Some Text -->
