@@ -62,7 +62,7 @@ Les lignes de commandes ci-dessous sont valables pour le terminal OSGeo4W Shell 
 
 #### Quelques variables en entrée...
 
-Pour bien commencer, il faut donc remplacer "CHEMIN_COMPLET_VERS_DATA" par le chemin en entier du dossier "data".
+Pour bien commencer, il faut donc remplacer "CHEMIN_COMPLET_VERS_DATA" par le chemin en entier du dossier "data".<br>
 On suppose que l'organisation choisie des dossiers est celle proposée ci-dessus. Si ce n'est pas le cas, bien renseigné les chemin complet pour chaque dossier.
 
 ```code
