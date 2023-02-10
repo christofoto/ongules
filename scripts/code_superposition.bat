@@ -28,7 +28,7 @@ for %%F in (*.shp) do (
     gdal_rasterize -burn 1 %%F %folder_raster_burn%\grid_france_100_%%F.tif
     )
 
-echo echo **// Derniers calculs pour la couche finale \\**
+echo **// Derniers calculs pour la couche finale \\**
 pause
 cd %folder_raster_burn%
 for %%F in (*.tif) do gdal_calc -A  %folder_raster%\grid_france_100_final.tif -B "%%F" --outfile=%folder_raster%\grid_france_100_final.tif --calc="(A+B)"
