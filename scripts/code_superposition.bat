@@ -1,6 +1,6 @@
 @echo off
 cls
-echo **// Chaine de traiement pour determiner le nombre d'espèces d'ongules presentes en tout point de la France \\**
+echo **// Chaine de traitement pour determiner le nombre d'espèces d'ongules presentes en tout point de la France \\**
 set /p CHEMIN_COMPLET_VERS_DATA=Indiquer le chemin vers le dossier "data" :
 @REM set CHEMIN_COMPLET_VERS_DATA=D:\SIG\travail\test\ongules_superposition
 set folder_vector_for_extent=%CHEMIN_COMPLET_VERS_DATA%\data\vectors
