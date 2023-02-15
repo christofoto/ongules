@@ -1,3 +1,4 @@
+<base target="_blank">
 <p align="center">
   <a href="https://professionnels.ofb.fr/fr/reseau-ongules-sauvages">
     <img src="https://github.com/christofoto/ongules/raw/main/images/header.png" alt="Logo">
