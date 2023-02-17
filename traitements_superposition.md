@@ -114,6 +114,8 @@ for %F in (*.shp) do gdal_rasterize -burn 1 "%F" %folder_raster_burn%\grid_franc
 
 #### Où l'on dresse le plat pour le servir :v:
 
+> **A NOTER** : sauf à vouloir entièrement automatisé l'ensemble du processus, le traitement final décrit ci-dessous peut-être fait dans QGIS grâce à la calculatrice raster. L'opération sera plus rapide que si on passe par la console et il sera possible de voir tout de suite le résultat sur un fond de carte.
+
 On se rend dans le dossier contenant les rasters des espèces. Et on additionne les uns à la suite des autres ces derniers au raster final. Au départ tous les pixels de la France ont la valeur 0. A chaque fois que le pixel correspondant d'une espèce à la valeur 1 elle sera augmenté de 1. Au final, la valeur d'un pixel ira de 0 (aucune espèce présente) au maximum correspondant au nombre total d'espèces, soit 11 dans notre cas.
 
 ```code
