@@ -1,6 +1,6 @@
 @echo off
 cls
-echo **// Chaine de traiement pour determiner le nombre d'espèces d'ongules presentes en tout point de la France \\**
+echo **// Chaine de traitement pour determiner le nombre d'espèces d'ongules presentes en tout point de la France \\**
 set /p CHEMIN_COMPLET_VERS_DATA=Indiquer le chemin vers le dossier "data" :
 @REM set CHEMIN_COMPLET_VERS_DATA=D:\SIG\travail\test\ongules_superposition
 set folder_vector_for_extent=%CHEMIN_COMPLET_VERS_DATA%\data\vectors
@@ -28,7 +28,7 @@ for %%F in (*.shp) do (
     gdal_rasterize -burn 1 %%F %folder_raster_burn%\grid_france_100_%%F.tif
     )
 
-echo echo **// Derniers calculs pour la couche finale \\**
+echo **// Derniers calculs pour la couche finale \\**
 pause
 cd %folder_raster_burn%
 for %%F in (*.tif) do gdal_calc -A  %folder_raster%\grid_france_100_final.tif -B "%%F" --outfile=%folder_raster%\grid_france_100_final.tif --calc="(A+B)"
